@@ -38,7 +38,7 @@ public class PurchaseTester {
 		 * purchase.
 		 */
 		double totalPrice = purchase.calculateTotalCost();
-		System.out.println("The TotalCost of purchasing " + quantity + " " + itemName + "'s is " + totalPrice);
+		System.out.println("The TotalCost of purchasing " + quantity + " " + itemName + " is " + totalPrice);
 		in.close();
 	}
 }
