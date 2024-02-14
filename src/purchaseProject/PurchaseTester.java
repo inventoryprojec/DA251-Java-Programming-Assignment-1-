@@ -10,6 +10,11 @@ import java.util.Scanner;
  */
 public class PurchaseTester {
 
+	// class variables
+	public static String itemName;
+	public static int quantity;
+	public static double price;
+
 	public static void main(String[] args) {
 		// create an instance of Purchase class
 		Purchase purchase = new Purchase();
@@ -19,15 +24,15 @@ public class PurchaseTester {
 
 		System.out.println("Enter the name of the item: ");
 		// it will get the input in the console as a String
-		String itemName = in.next();
+		itemName = in.next();
 
 		System.out.println("Enter the quantity: ");
 		// it will get the input in the console as int
-		int quantity = in.nextInt();
+		quantity = in.nextInt();
 
 		System.out.println("Enter the price of the item: ");
 		// it will get the input in the console as double
-		double price = in.nextDouble();
+		price = in.nextDouble();
 
 		// prompt the user to enter purchase details
 		purchase.setItemName(itemName);
@@ -38,7 +43,9 @@ public class PurchaseTester {
 		 * purchase.
 		 */
 		double totalPrice = purchase.calculateTotalCost();
-		System.out.println("The TotalCost of purchasing " + quantity + " " + itemName + " is " + totalPrice);
+		System.out.println("the total cost of the transaction including the sales tax : " + totalPrice);
 		in.close();
+
 	}
+
 }
